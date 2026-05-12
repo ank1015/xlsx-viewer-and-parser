@@ -6,7 +6,7 @@ ROOT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 PROJECT="$ROOT_DIR/src/OpenXml.Cli/OpenXml.Cli.csproj"
 ARTIFACT_DIR="$ROOT_DIR/artifacts/release/v$VERSION"
 BIN_NAME="heysnap-xlsxl"
-RIDS=("linux-x64" "linux-arm64")
+RIDS=("linux-x64" "linux-arm64" "osx-x64" "osx-arm64")
 
 rm -rf "$ARTIFACT_DIR"
 mkdir -p "$ARTIFACT_DIR"
@@ -45,7 +45,7 @@ chmod 755 "$ARTIFACT_DIR/install.sh"
 
 (
   cd "$ARTIFACT_DIR"
-  shasum -a 256 "$BIN_NAME"-linux-*.tar.gz install.sh > SHA256SUMS
+  shasum -a 256 "$BIN_NAME"-*.tar.gz install.sh > SHA256SUMS
 )
 
 echo "Release artifacts written to $ARTIFACT_DIR"

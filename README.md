@@ -50,7 +50,7 @@ Install a specific version:
 curl -fsSL https://github.com/ank1015/xlsx-viewer-and-parser/releases/download/v0.1.0/install.sh | HEYSNAP_XLSXL_VERSION=v0.1.0 sh
 ```
 
-The installer detects `linux-x64` and `linux-arm64`, downloads the matching self-contained binary, and installs it to `/usr/local/bin` by default. Override the install location with `HEYSNAP_XLSXL_INSTALL_DIR`.
+The installer detects `linux-x64`, `linux-arm64`, `osx-x64`, and `osx-arm64`, downloads the matching self-contained binary, and installs it to `/usr/local/bin` by default. Override the install location with `HEYSNAP_XLSXL_INSTALL_DIR`.
 
 Build release artifacts locally:
 

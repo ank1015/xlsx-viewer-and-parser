@@ -18,15 +18,23 @@ need tar
 need uname
 
 machine="$(uname -m)"
-case "$machine" in
-  x86_64|amd64)
+system="$(uname -s)"
+
+case "$system:$machine" in
+  Linux:x86_64|Linux:amd64)
     rid="linux-x64"
     ;;
-  aarch64|arm64)
+  Linux:aarch64|Linux:arm64)
     rid="linux-arm64"
     ;;
+  Darwin:x86_64|Darwin:amd64)
+    rid="osx-x64"
+    ;;
+  Darwin:arm64|Darwin:aarch64)
+    rid="osx-arm64"
+    ;;
   *)
-    echo "Unsupported architecture: $machine" >&2
+    echo "Unsupported platform: $system $machine" >&2
     exit 1
     ;;
 esac
