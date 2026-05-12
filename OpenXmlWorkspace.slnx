@@ -1,0 +1,9 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/OpenXml.Cli/OpenXml.Cli.csproj" />
+    <Project Path="src/OpenXml.Parsers/OpenXml.Parsers.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/OpenXml.Parsers.Tests/OpenXml.Parsers.Tests.csproj" />
+  </Folder>
+</Solution>
